@@ -88,7 +88,7 @@ var yt = yt || {};yt.timing = yt.timing || {};yt.timing.tick = function(label, o
   
 
 
-    <div id="alerts">    <div  class="yt-alert yt-alert-info "><span class="yt-alert-icon"><img src="https://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif" class="icon master-sprite" alt="Alert icon"></span><div  class="yt-alert-content">        We're changing our privacy policy. This stuff matters.&nbsp;&nbsp;<a href="https://www.google.com/intl/en/policies/" onclick="yt.www.privacynotice.learnMore();">Learn more</a>&nbsp;&nbsp;<a onclick="yt.www.privacynotice.dismiss(); _hidediv(this.parentNode); return false;">Dismiss</a>
+    <div id="alerts">    <div  class="yt-alert yt-alert-info "><span class="yt-alert-icon"><img src="https://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif" class="icon master-sprite" alt="Alert icon"></span><div  class="yt-alert-content progressrep">Wait, Wha~~~?
 
 </div><button type="button" onclick="_hidediv(this.parentNode);yt.www.privacynotice.dismiss()" class="close">Close</button></div>
 </div>
@@ -114,7 +114,11 @@ var yt = yt || {};yt.timing = yt.timing || {};yt.timing.tick = function(label, o
 
     <div id="ad_creative_1" class="ad-div mastad" style="z-index: 1;">
 
-<script>(function() {var loaded = function() {return yt && yt.www && yt.www.home && yt.www.home.ads;};window.masthead_ad_creative_iframe_1_workaround = function() {if (loaded()) {yt.www.home.ads.workaroundIE(this);}};window.masthead_ad_creative_iframe_1_onload = function() {if (!loaded()) {setTimeout(masthead_ad_creative_iframe_1_onload, 50);return;}yt.www.home.ads.workaroundLoad();};})();</script>      <iframe id="ad_creative_iframe_1" src="https://ad-g.doubleclick.net/adi/com.ythome/_default;sz=970x250,960x250;tile=1;dcopt=ist;klg=en;kt=K;kga=-1;kgg=-1;kcr=us;dc_dedup=1;kmyd=ad_creative_1;kbsg=HPUS120212;ord=6563054943833558?"
+<script>(function() {var loaded = function() {return yt && yt.www && yt.www.home && yt.www.home.ads;};
+                     document.querySelectorAll(".progressrep").forEach(el => {
+    el.innerText = "NewTube Progress Report - 04/27/2026";
+});
+                     window.masthead_ad_creative_iframe_1_workaround = function() {if (loaded()) {yt.www.home.ads.workaroundIE(this);}};window.masthead_ad_creative_iframe_1_onload = function() {if (!loaded()) {setTimeout(masthead_ad_creative_iframe_1_onload, 50);return;}yt.www.home.ads.workaroundLoad();};})();</script>      <iframe id="ad_creative_iframe_1" src="https://ad-g.doubleclick.net/adi/com.ythome/_default;sz=970x250,960x250;tile=1;dcopt=ist;klg=en;kt=K;kga=-1;kgg=-1;kcr=us;dc_dedup=1;kmyd=ad_creative_1;kbsg=HPUS120212;ord=6563054943833558?"
               height="250" width="970"
               scrolling="no" frameborder="0" style="z-index: 1"
               onload="masthead_ad_creative_iframe_1_onload();"
@@ -144,7 +148,7 @@ Sign in to add channels to your homepage
             <img src="https://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif" alt="" class="system-icon category">
           </span>
           <span class="display-name">
-From YouTube
+From NewTube
           </span>
         </a>
       </h3>
