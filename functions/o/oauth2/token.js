@@ -1,5 +1,8 @@
 export async function onRequest(context) {
-const data = {"meme":"this is not a token"};
+const data = {
+  "error": "authorization_pending",
+  "error_description": "Precondition Required"
+};
 
 return new Response(JSON.stringify(data), {
 status: 200,
