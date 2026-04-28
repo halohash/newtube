@@ -12,7 +12,8 @@ export async function onRequestGet(context) {
     const listId = rawList.split(",")[0];
 
     const feedMap = {
-        LBpop: "standardfeeds/most_popular"
+        LBpop: "standardfeeds/most_popular",
+        FLGNbesWrtvHPgtpTtfW4OhA: "standardfeeds/most_popular"
     };
 
     const feedPath = feedMap[listId];
