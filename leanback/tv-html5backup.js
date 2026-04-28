@@ -14270,7 +14270,7 @@
         return Vh("https://tv36.pages.dev/feeds/api/videos?alt=json&", {
             page: a + 1,
             quality: d,
-            q: c,
+            search_query: c,
             nonmonetized: 1
         })
     }
