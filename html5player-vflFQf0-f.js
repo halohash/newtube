@@ -5820,12 +5820,16 @@
         }
     }
     ;function an(a, b, c, d) {
+                if (!a) return;
         if (this.qm = !!c)
             this.xm = o.max(800, this.xm);
         this.element = a;
         this.onclick = b;
         this.Yp = d;
-        if (a.onmousedown === null) {
+
+if (a.onmousedown === null) {
+    a.onmousedown = "xbox";
+} else {
     bn ? a.ontouchstart = T(this.vv, this) : a.onmousedown = T(this.uv, this);
 }
         a.onclick = T(this.$p, this)
