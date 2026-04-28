@@ -5825,7 +5825,9 @@
         this.element = a;
         this.onclick = b;
         this.Yp = d;
-        bn ? a.ontouchstart = T(this.vv, this) : a.onmousedown = T(this.uv, this);
+        a.onmousedown = a.onmousedown === undefined
+    ? "xbox"
+    : (bn ? (a.ontouchstart = T(this.vv, this)) : T(this.uv, this));
         a.onclick = T(this.$p, this)
     }
     var bn = "ontouchstart"in n
