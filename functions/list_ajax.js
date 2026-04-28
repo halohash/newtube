@@ -2,18 +2,20 @@ export async function onRequestGet(context) {
     const url = new URL(context.request.url);
     const params = url.searchParams;
 
-    const list = params.get("list");
-    if (!list) {
+    const rawList = params.get("list");
+    if (!rawList) {
         return new Response(JSON.stringify({
             error: "Missing list parameter"
         }), { status: 400 });
     }
 
+    const listId = rawList.split(",")[0];
+
     const feedMap = {
         LBpop: "standardfeeds/most_popular"
     };
 
-    const feedPath = feedMap[list];
+    const feedPath = feedMap[listId];
     if (!feedPath) {
         return new Response(JSON.stringify({
             error: "Invalid list"
@@ -61,7 +63,7 @@ export async function onRequestGet(context) {
         });
 
         const response = {
-            list: list,
+            list: rawList,
             title: data.feed?.title?.["$t"] || "",
             total_results: data.feed?.["openSearch$totalResults"]?.["$t"] || 0,
             start_index: data.feed?.["openSearch$startIndex"]?.["$t"] || 1,
