@@ -5,7 +5,11 @@
 <!-- machid: nLThsU052OXJEdFd1WEU0NlBVZDFhUU9KdjdldXB4RW10WHpVbE1uOS00RGh1dldRQXVRNllR -->
 <head>
   
-    
+    <style>
+      #alerts {
+  display: none;
+}
+    </style>
 
     <title>
         Oops! Something went wrong. - NewTube
@@ -36,7 +40,38 @@
 
 
 
+<script>
+function showError(message) {
+    const alerts = document.getElementById("alerts");
+    const msg = document.getElementsByClassName("errormessagent")[0];
 
+    msg.innerText = message;
+    alerts.style.display = "block";
+}
+
+function hideError() {
+    document.getElementById("alerts").style.display = "none";
+}
+
+// URL-based errors
+const params = new URLSearchParams(window.location.search);
+const error = params.get("error");
+
+const errorMap = {
+    loginerror: "Logging in has failed. Sorry about that.",
+    network: "A network error occurred. Please try again.",
+    serverissue: "Server had an issue.",
+    banned: "Your IP has been banned. <b>Possibly for security concerns.</b>"
+};
+
+if (error) {
+    if (errorMap[error]) {
+        showError(errorMap[error]);
+    } else {
+        showError(error); // custom message
+    }
+}
+</script>
 
     <style>
 #content {
