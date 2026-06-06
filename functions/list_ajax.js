@@ -54,7 +54,7 @@ export async function onRequestGet(context) {
                 video_id: media["yt$videoid"]?.["$t"] || "",
                 title: media["media$title"]?.["$t"] || "",
                 author: e.author?.[0]?.name?.["$t"] || "",
-                view_count: e["yt$statistics"]?.viewCount || 0,
+                view_count: e["yt$statistics"]?.viewCount || 1,
                 length_seconds: media["yt$duration"]?.seconds || null,
                 description: media["media$description"]?.["$t"] || "",
                 thumbnail: thumbnails[0]?.url || "",

@@ -10147,7 +10147,7 @@
                 d.duration = a.duration;
                 d.author = a.author;
                 d.e = a.user_id;
-                d.Te = hm(parseInt(a.views.replace(/,/g, ""), 10));
+                d.Te = hm(parseInt(String(a.views).replace(/,/g, ""), 10));
                 d.vg = km(a.time_created);
                 d.$a = a.thumbnail.replace("/default.jpg", "/hqdefault.jpg");
                 d.ws = !!a.watched;
