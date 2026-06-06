@@ -1333,6 +1333,7 @@
             try {
                 return eval("(" + a + ")")
             } catch (b) {}
+        console.log(JSON.stringify(obj));
         g(Error("Invalid JSON string: " + a))
     }
     function ac(a) {
