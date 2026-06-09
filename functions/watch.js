@@ -191,15 +191,7 @@ var yt = yt || {};yt.timing = yt.timing || {};yt.timing.tick = function(label, o
   <div id="content-container">
     <!-- begin content -->
     <div id="content">
-      <div id="watch-container" itemscope itemtype="http://schema.org/VideoObject">
-      <link itemprop="url" href="http://www.youtube.com/watch?v=hAfcYuLbMa8">
-    <meta itemprop="name" content="Mad Men - Season 5 - &#39;Don Is Back&#39; Teaser">
-    <meta itemprop="description" content="Mad Men - Season 5 Teaser">
-    <link itemprop="thumbnailUrl" href="http://i1.ytimg.com/vi/hAfcYuLbMa8/hqdefault.jpg">
-      <link itemprop="embedURL" href="http://www.youtube.com/v/hAfcYuLbMa8?version=3&amp;autohide=1">
-      <meta itemprop="playerType" content="Flash">
-      <meta itemprop="width" content="640">
-      <meta itemprop="height" content="360">
+
 
 
   <!-- begin watch-headline-container -->
@@ -1299,86 +1291,7 @@ Clear all videos from this list
 
 
 
-  <script>
     
-
-
-  yt.setMsg({
-    'LIST_CLEARED': "List cleared",
-    'PLAYLIST_VIDEO_DELETED': "Video deleted.",
-    'ERROR_OCCURRED': "Sorry, an error occurred.",
-    'NEXT_VIDEO_TOOLTIP': "Next video:\u003cbr\u003e \u0026#8220;${next_video_title}\u0026#8221;",
-    'NEXT_VIDEO_NOTHUMB_TOOLTIP': "Next video",
-    'SHOW_PLAYLIST_TOOLTIP': "Show playlist",
-    'HIDE_PLAYLIST_TOOLTIP': "Hide playlist",
-    'AUTOPLAY_ON_TOOLTIP': "Turn autoplay off",
-    'AUTOPLAY_OFF_TOOLTIP': "Turn autoplay on",
-    'SHUFFLE_ON_TOOLTIP': "Turn shuffle off",
-    'SHUFFLE_OFF_TOOLTIP': "Turn shuffle on",
-    'PLAYLIST_BAR_PLAYLIST_SAVED': "Playlist saved!",
-    'PLAYLIST_BAR_ADDED_TO_FAVORITES': "Added to favorites",
-    'PLAYLIST_BAR_ADDED_TO_PLAYLIST': "Added to playlist",
-    'PLAYLIST_BAR_ADDED_TO_QUEUE': "Added to queue",
-    'AUTOPLAY_WARNING1': "Next video starts in 1 second...",
-    'AUTOPLAY_WARNING2': "Next video starts in 2 seconds...",
-    'AUTOPLAY_WARNING3': "Next video starts in 3 seconds...",
-    'AUTOPLAY_WARNING4': "Next video starts in 4 seconds...",
-    'AUTOPLAY_WARNING5': "Next video starts in 5 seconds...",
-    'UNDO_LINK': "Undo"  });
-
-
-  yt.setConfig({
-    'DRAGDROP_BINARY_URL': "\/\/s.ytimg.com\/yt\/jsbin\/www-dragdrop-vflk8evqw.js",
-    'PLAYLIST_BAR_PLAYING_INDEX': -1,
-    'LIST_COPY_ON_EDIT_ENABLED': false  });
-
-    yt.net.ajax.setToken('addto_ajax_logged_out', "k_vYgpePBbrIvVJbqpi0gk8sOb18MEAxMzI5NzEwNDI5");
-
-    yt.www.lists.init();
-
-
-
-
-
-        yt.pubsub.subscribe('init', function() {
-      yt.www.thumbnaildelayload.init();
-    });
-
-
-
-
-
-
-      yt.pubsub.subscribe('init', function() {
-        yt.net.scriptloader.load("\/\/s.ytimg.com\/yt\/jsbin\/www-searchbox-vflgcaFzT.js", function() {
-          
-      if (_gel('masthead-search')) {
-        yt.setTimeout(function() {
-          searchbox.yt.install(_gel('masthead-search'),
-              _gel('masthead-search')["search_query"],
-              "en",
-              "us",
-              "close",
-              false,
-              '',
-              '',
-              null,
-              "Suggestion dismissed. Visit \u003ca href=\"\/my_search_history\"\u003emy search history\u003c\/a\u003e to remove it from your history as well.\n",
-              -1,
-              null);
-        }, 100);
-      }
-
-        });
-      });
-
-
-  </script>
-
-  
-
-
-  
 </body>
 </html>`;
 
