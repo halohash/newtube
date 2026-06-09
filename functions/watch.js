@@ -21,11 +21,10 @@ export async function onRequest(context) {
         "Untitled video";
     }
   } catch (e) {
-    title = "Video unavailable";
+    title = "Unknown";
   }
 
-  const html = `
-<!DOCTYPE html>
+  const html = `<!DOCTYPE html>
   <html lang="en" dir="ltr" >
 
 <!-- machid: pWWVleGVkeVVTNVdqRGU0RW1ZcDBOZVlTMHhhNTVpZ1lHUFFyeXIycHpIeGQxMGRuRzBHb29R -->
@@ -1383,9 +1382,14 @@ Clear all videos from this list
 </body>
 </html>`;
 
-  return new Response(html, {
+try {  return new Response(html, {
     headers: {
       "Content-Type": "text/html; charset=UTF-8"
+    }
+  });} catch(e) {  return new Response(e, {
+    headers: {
+      status: 503,
+      "Content-Type": "text/plain; charset=UTF-8"
     }
   });
 }
