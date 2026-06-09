@@ -1382,14 +1382,18 @@ Clear all videos from this list
 </body>
 </html>`;
 
-try {  return new Response(html, {
+try {
+  return new Response(html, {
     headers: {
       "Content-Type": "text/html; charset=UTF-8"
     }
-  });} catch(e) {  return new Response(e, {
+  });
+} catch (e) {
+  return new Response(e?.stack || e?.message || String(e), {
+    status: 503,
     headers: {
-      status: 503,
       "Content-Type": "text/plain; charset=UTF-8"
     }
   });
+}
 }}
