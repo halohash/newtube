@@ -13,7 +13,8 @@ export async function onRequestGet(context) {
 
     const feedMap = {
         LBpop: "standardfeeds/most_popular",
-        FLGNbesWrtvHPgtpTtfW4OhA: "standardfeeds/most_popular"
+        FLGNbesWrtvHPgtpTtfW4OhA: "standardfeeds/most_popular",
+        FLeNZlh03MyUkjRlLFpVQxsg: "standardfeeds/most_popular"
     };
 
     const feedPath = feedMap[listId];
